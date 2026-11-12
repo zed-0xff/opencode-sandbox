@@ -1,0 +1,6 @@
+*.local
+*.tmp
+
+.env
+opencode.json
+tmp

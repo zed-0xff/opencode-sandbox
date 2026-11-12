@@ -1,0 +1,3 @@
+[submodule ".config/opencode/plugins/opencode-prune-images"]
+	path = .config/opencode/plugins/opencode-prune-images
+	url = https://github.com/Sugamsss/opencode-prune-images.git

@@ -1,0 +1,12 @@
+{
+  "docker": {
+    "mounts": [
+      {
+        "type": "bind",
+        "source": "${HOME}/projects",
+        "target": "/workspace/projects",
+        "read_only": false
+      }
+    ]
+  }
+}

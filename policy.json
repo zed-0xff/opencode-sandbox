@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "filesystem_policy": {
+    "include_workdir": true,
+    "read_only": [
+      "/bin",
+      "/usr",
+      "/lib",
+      "/proc",
+      "/dev/urandom",
+      "/etc",
+      "/var/log"
+    ],
+    "read_write": [
+      "/tmp",
+      "/dev/null"
+    ]
+  },
+  "landlock": {
+    "compatibility": "best_effort"
+  },
+  "network_policies": {
+    "web_search": {
+      "endpoints": [
+        {
+          "port": 443,
+          "host": "api.exa.ai"
+        },
+        {
+          "port": 443,
+          "host": "api.fetch.tinyfish.ai"
+        },
+        {
+          "port": 443,
+          "host": "api.firecrawl.dev"
+        },
+        {
+          "port": 443,
+          "host": "api.parallel.ai"
+        },
+        {
+          "port": 443,
+          "host": "api.search.brave.com"
+        },
+        {
+          "port": 443,
+          "host": "api.search.tinyfish.ai"
+        },
+        {
+          "port": 443,
+          "host": "api.tavily.com"
+        },
+        {
+          "port": 443,
+          "host": "html.duckduckgo.com"
+        },
+        {
+          "port": 443,
+          "host": "search.brave.com"
+        },
+        {
+          "port": 443,
+          "host": "www.bing.com"
+        },
+        {
+          "port": 443,
+          "host": "www.google.com"
+        }
+      ],
+      "binaries": [
+        {
+          "path": "/**"
+        }
+      ]
+    },
+    "github_readonly": {
+      "name": "github_readonly",
+      "endpoints": [
+        {
+          "host": "github.com",
+          "port": 443
+        },
+        {
+          "host": "api.github.com",
+          "port": 443,
+          "protocol": "rest",
+          "enforcement": "enforce",
+          "access": "read-only"
+        }
+      ],
+      "binaries": [
+        {
+          "path": "/**"
+        }
+      ]
+    },
+    "npm_registry": {
+      "endpoints": [
+        {
+          "host": "registry.npmjs.org",
+          "port": 443,
+          "protocol": "rest",
+          "enforcement": "enforce",
+          "access": "read-only",
+          "allow_encoded_slash": true
+        }
+      ],
+      "binaries": [
+        {
+          "path": "/**"
+        }
+      ]
+    }
+  }
+}

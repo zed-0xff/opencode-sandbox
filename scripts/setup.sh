@@ -13,7 +13,6 @@ done
 curl -fsSL https://bun.sh/install | bash
 bun add github:zed-0xff/operator-memory
 bun add --minimum-release-age 0 @aerovato/operator-helper@latest
-find . -name operator-helper
 operator-helper install opencode
 
 # externally mounted session storage

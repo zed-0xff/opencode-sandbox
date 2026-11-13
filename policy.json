@@ -11,7 +11,9 @@
       "/var/log",
 
       "/dev/urandom",
-      "/entrypoint.sh"
+      "/entrypoint.sh",
+      "/workspace/.config/opencode/opencode.json",
+      "/workspace/.config/opencode/plugins"
     ],
     "read_write": [
       "/tmp",
